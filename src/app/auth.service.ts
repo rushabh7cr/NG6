@@ -13,7 +13,7 @@ export class AuthService {
       name
     })
     .subscribe(data=>{
-      console.log("zzzzzzz");
+      
       console.log(data);
     },err=>{
       console.log(err);
