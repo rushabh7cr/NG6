@@ -1,5 +1,32 @@
-<form (submit)="loginUser($event)">
-
-        <input type="text" placeholder="Username" id="username">
-    <input type="submit" value="submit">
-</form>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" >
+  <style>
+    div{
+        margin-left: 530px;
+    }
+  </style>
+  </head>
+  
+  <div class="container">
+  <form (submit)="loginUser($event)">
+  
+        <input type="number" placeholder="Enter number" id="num" required > &nbsp;
+    <input class="btn" type="submit" value="submit">
+  </form>
+  <br><br>
+  </div>
+  
+  <div *ngIf="display">
+  <table border="1px">
+  <thead>
+  <th>WORD</th>
+  <th>FREQUENCY</th>
+  </thead>
+  <tr *ngFor="let word of words">
+    <td>{{word}}</td>
+    <td>{{data[word]}}</td>
+  </tr>
+  </table>
+  </div>
+  
+  
